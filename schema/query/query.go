@@ -22,3 +22,4 @@ var RootQuery = graphql.NewObject(graphql.ObjectConfig{
 
 	},
 })
+

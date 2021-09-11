@@ -28,6 +28,6 @@ var Mutation = graphql.NewObject(graphql.ObjectConfig{
 			Resolve: CreateProductMutation ,
 		},
 		// untuk membuat object lainya tinggal di ulang
-
+		
 	},
 })

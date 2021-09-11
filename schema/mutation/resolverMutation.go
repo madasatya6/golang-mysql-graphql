@@ -14,7 +14,7 @@ func CreateProductMutation(param graphql.ResolveParams) (interface{},error) {
 	if err != nil {
 		panic(err.Error())
 	}
-	_ , err = db.Query("INSERT INTO Restaurant.Products values (?,?,?,?)",idpro,nama,qty,img)
+	_ , err = db.Query("INSERT INTO Products values (?,?,?,?)",idpro,nama,qty,img)
 	if err != nil {
 		panic(err.Error())
 	}
