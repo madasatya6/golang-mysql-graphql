@@ -1,0 +1,2 @@
+untuk menbambil data : http://localhost:8088/graphql?Query={Products(ID_PRO:%2212%22){ID_PRO,PRO_NAME}}
+untuk menambah data : http://localhost:8088/graphql?Query=mutation+M{ProductTypes:CreateProducts(ID_PRO:%22CICING%22,PRO_NAME:%22SUMBAWA%22,QTE_IN_STOCK:123,PRO_IMAGE:%22POER%22){PRO_NAME}}
