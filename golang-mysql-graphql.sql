@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Sep 2021 pada 09.41
+-- Waktu pembuatan: 11 Sep 2021 pada 09.53
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.2
 
@@ -32,14 +32,14 @@ CREATE TABLE `products` (
   `ID_PRO` varchar(16) NOT NULL,
   `PRO_NAME` varchar(50) DEFAULT NULL,
   `QTE_IN_STOCK` int(11) DEFAULT NULL,
-  `PRO_IMG` varchar(100) DEFAULT NULL
+  `PRO_IMAGE` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `products`
 --
 
-INSERT INTO `products` (`ID_PRO`, `PRO_NAME`, `QTE_IN_STOCK`, `PRO_IMG`) VALUES
+INSERT INTO `products` (`ID_PRO`, `PRO_NAME`, `QTE_IN_STOCK`, `PRO_IMAGE`) VALUES
 ('lagu', 'ketan', 16, 'aslkfl'),
 ('pisang12', 'pisang bakar', 12, 'balisojdoeidjdl'),
 ('pisang13', 'sebakul nasi', 14, 'aslkdlfl');
