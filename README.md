@@ -1,2 +1,2 @@
-# golang-mysql-graphql
-Contoh Graphql Golang + MySQL
+# Golang-mysql-graphql
+Example Golang graphql api with mysql db.
