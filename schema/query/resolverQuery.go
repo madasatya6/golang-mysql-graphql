@@ -30,3 +30,29 @@ func ProductResolve(param graphql.ResolveParams) (interface{},error){
 
 	return b , nil
 }
+
+func ProductsAttributeResolve(param graphql.ResolveParams) (interface{},error) {
+	var a types.ProductsAttribute
+	var b []types.ProductsAttribute
+	db ,err:= config.GetConnection()
+	if err != nil {
+		panic(err.Error())
+	}
+	b = b[:0]
+	result,err := db.Query("select id, ID_PRO, color from products_attribute")
+	if err != nil{
+		panic(err.Error())
+	}
+
+	for result.Next(){
+		err = result.Scan(&a.ID,&a.ID_PRO,&a.Color)
+		if err != nil{
+			panic(err.Error())
+		}
+		b = append(b,a)
+
+	}
+
+
+	return b , nil
+}

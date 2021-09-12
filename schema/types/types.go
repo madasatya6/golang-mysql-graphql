@@ -9,7 +9,7 @@ var ProductTypes = graphql.NewObject(graphql.ObjectConfig{
 	Name:"Products",
 	Fields:graphql.Fields{
 		"ID_PRO":&graphql.Field{
-			Type:graphql.Int,
+			Type:graphql.String,
 		},
 		"PRO_NAME":&graphql.Field{
 			Type:graphql.String,
@@ -21,6 +21,21 @@ var ProductTypes = graphql.NewObject(graphql.ObjectConfig{
 			Type:graphql.Float,
 		},
 		"PRO_IMAGE":&graphql.Field{
+			Type:graphql.String,
+		},
+	},
+})
+
+var ProductsAttributeTypes = graphql.NewObject(graphql.ObjectConfig{
+	Name:"ProductsAttribute",
+	Fields:graphql.Fields{
+		"id":&graphql.Field{
+			Type:graphql.Int,
+		},
+		"ID_PRO":&graphql.Field{
+			Type:graphql.String,
+		},
+		"color":&graphql.Field{
 			Type:graphql.String,
 		},
 	},

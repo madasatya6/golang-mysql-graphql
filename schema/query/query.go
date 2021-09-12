@@ -18,8 +18,17 @@ var RootQuery = graphql.NewObject(graphql.ObjectConfig{
 			},
 			Resolve: ProductResolve,
 		},
+		
+		"ProductsAttribute":&graphql.Field{
+			Type:graphql.NewList(types.ProductsAttributeTypes),
+			Args:graphql.FieldConfigArgument{
+				"id": &graphql.ArgumentConfig{
+					Type:graphql.NewNonNull(graphql.Int), 
+				},
+			},
+			Resolve: ProductsAttributeResolve,
+		},
 		// untuk membuat object lainya tinggal di ulang
-
 	},
 })
 

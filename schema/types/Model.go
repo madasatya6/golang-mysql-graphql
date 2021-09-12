@@ -6,3 +6,9 @@ type Product struct {
 	QteStock int `json:"QTE_IN_STOCK"`
 	ProImg string `json:"PRO_IMAGE"`
 }
+
+type ProductsAttribute struct{
+	ID string `json:"id"`
+	ID_PRO string `json:"ID_PRO"`
+	Color string `json:"color"`
+}
