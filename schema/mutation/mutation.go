@@ -24,10 +24,30 @@ var Mutation = graphql.NewObject(graphql.ObjectConfig{
 				"PRO_IMAGE": &graphql.ArgumentConfig{
 					Type:graphql.NewNonNull(graphql.String),
 				},
+				//array
+				"Attributes": &graphql.ArgumentConfig{
+					Type:graphql.NewList(Attribute),
+				},
 			},
-			Resolve: CreateProductMutation ,
+			Resolve: CreateProductMutation,
 		},
 		// untuk membuat object lainya tinggal di ulang
-		
+	},
+})
+
+var Attribute = graphql.NewObject(graphql.ObjectConfig{
+	Name:"MutationAttribute",
+	Fields:graphql.Fields{
+		"CreateAttribute":&graphql.Field{
+			Type:graphql.NewList(types.ProductsAttributeTypes),
+			Args:graphql.FieldConfigArgument{
+				"ID_PRO":&graphql.ArgumentConfig{
+					Type:graphql.NewNonNull(graphql.String),
+				},
+				"color":&graphql.ArgumentConfig{
+					Type:graphql.NewNonNull(graphql.String),
+				},
+			},
+		},
 	},
 })
