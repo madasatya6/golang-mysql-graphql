@@ -41,9 +41,10 @@ var Attribute = graphql.NewObject(graphql.ObjectConfig{
 		"CreateAttribute":&graphql.Field{
 			Type:graphql.NewList(types.ProductsAttributeTypes),
 			Args:graphql.FieldConfigArgument{
+				/*
 				"ID_PRO":&graphql.ArgumentConfig{
 					Type:graphql.NewNonNull(graphql.String),
-				},
+				},*/
 				"color":&graphql.ArgumentConfig{
 					Type:graphql.NewNonNull(graphql.String),
 				},
