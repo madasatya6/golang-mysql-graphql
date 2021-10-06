@@ -25,28 +25,7 @@ var ProductTypes = graphql.NewObject(graphql.ObjectConfig{
 		},
 		//implementasi array
 		"Attributes":&graphql.Field{
-			Type:graphql.NewList(graphql.NewObject(graphql.ObjectConfig{
-				Name:"Attributes",
-				Fields:graphql.Fields{
-					"id":&graphql.Field{
-						Type:graphql.Int,
-					},
-					"ID_PRO":&graphql.Field{
-						Type:graphql.String,
-					},
-					"color":&graphql.Field{
-						Type:graphql.String,
-					},
-				},
-			})),
-			Resolve: func(params graphql.ResolveParams) (interface{}, error) {
-				product, _ := params.Source.(Product)
-				attributes, err := ProductsAttributeFind(product.IdPro)
-				if err != nil {
-					return nil, err
-				}
-				return attributes, nil
-			},
+			Type:graphql.NewList(ProductsAttributeTypes),
 		},
 	},
 })
